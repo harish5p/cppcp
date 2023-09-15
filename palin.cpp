@@ -16,17 +16,15 @@ long int digitsone(long int n) {
   }
   // cout << "Result for digitsone " <<result << endl;
 
-  if (result/10 != result%10){
-    result = result +1;
+  if (result / 10 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=100) {
+  if (result >= 100) {
     result = 100;
-  } 
+  }
   // cout << "Updated result for digitsone: " << result << endl;
   return result;
-
-
 }
 
 long int digitstwo(long int n) {
@@ -40,17 +38,17 @@ long int digitstwo(long int n) {
   } else if (hundreds > units) {
     result = hundreds * 100 + tens * 10 + hundreds;
   } else {
-   result = hundreds * 100 + tens * 10 + (hundreds + 10);
+    result = hundreds * 100 + tens * 10 + (hundreds + 10);
   }
   // cout << "Result for digitstwo " <<result << endl;
 
-  if (result/100 != result%10){
-    result = result +1;
+  if (result / 100 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=1000) {
+  if (result >= 1000) {
     result = 1000;
-  } 
+  }
   // cout << "Updated result for digitstwo: " << result << endl;
   return result;
 }
@@ -75,13 +73,13 @@ long int digitsthree(long int n) {
   }
   // cout << "Result for digitsthree " <<result << endl;
 
-  if (result/1000 != result%10){
-    result = result +1;
+  if (result / 1000 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=10000) {
+  if (result >= 10000) {
     result = 10000;
-  } 
+  }
   // cout << "Updated result for digitsthree: " << result << endl;
   return result;
 }
@@ -106,13 +104,13 @@ long int digitsfour(long int n) {
   }
   // cout << "Result for digitsfour " <<result << endl;
 
-  if (result/10000 != result%10){
-    result = result +1;
+  if (result / 10000 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=100000) {
+  if (result >= 100000) {
     result = 100000;
-  } 
+  }
   // cout << "Updated result for digitsfour: " << result << endl;
   return result;
 }
@@ -139,13 +137,13 @@ long int digitsfive(long int n) {
   }
   // cout << "Result for digitsfive " <<result << endl;
 
-  if (result/100000 != result%10){
-    result = result +1;
+  if (result / 100000 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=1000000) {
+  if (result >= 1000000) {
     result = 1000000;
-  } 
+  }
   // cout << "Updated result for digitsfive: " << result << endl;
   return result;
 }
@@ -175,13 +173,13 @@ long int digitssix(long int n) {
 
   // cout << "Result for digitssix " <<result << endl;
 
-  if (result/1000000 != result%10){
-    result = result +1;
+  if (result / 1000000 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=10000000) {
+  if (result >= 10000000) {
     result = 10000000;
-  } 
+  }
   // cout << "Updated result for digitssix: " << result << endl;
   return result;
 }
@@ -213,42 +211,85 @@ long int digitsseven(long int n) {
 
   // cout << "Result for digitsseven " <<result << endl;
 
-  if (result/10000000 != result%10){
-    result = result +1;
+  if (result / 10000000 != result % 10) {
+    result = result + 1;
   }
 
-  if (result >=100000000) {
+  if (result >= 100000000) {
     result = 100000000;
-  } 
+  }
   // cout << "Updated result for digitsseven: " << result << endl;
   return result;
 }
 
-void next_palindrome(long int n) {
+// void next_palindrome(long int n) {
+
+//   int digits = log10(n);
+
+//   if (n == 1) {
+
+//   } else if (n < 9) {
+//     cout << n << "\n";
+//   } else if (n == 9) {
+//     cout << 11 << "\n";
+//   } else if (digits == 1) {
+//     cout << digitsone(n) << "\n";
+//   } else if (digits == 2) {
+//     cout << digitstwo(n) << "\n";
+//   } else if (digits == 3) {
+
+//     cout << digitsthree(n) << "\n";
+//   } else if (digits == 4) {
+//     cout << digitsfour(n) << "\n";
+//   } else if (digits == 5) {
+//     cout << digitsfive(n) << "\n";
+//   } else if (digits == 6) {
+//     cout << digitssix(n) << "\n";
+//   } else if (digits == 7) {
+//     cout << digitsseven(n) << "\n";
+//   }
+// }
+
+int next_palindrome(long int n) {
 
   int digits = log10(n);
 
   if (n == 1) {
 
   } else if (n < 9) {
-    cout << n << "\n";
+    return n;
   } else if (n == 9) {
-    cout << 11 << "\n";
+    return 11;
   } else if (digits == 1) {
-    cout << digitsone(n) << "\n";
+    return digitsone(n);
   } else if (digits == 2) {
-    cout << digitstwo(n) << "\n";
+    return digitstwo(n);
   } else if (digits == 3) {
 
-    cout << digitsthree(n) << "\n";
+    return digitsthree(n);
   } else if (digits == 4) {
-    cout << digitsfour(n) << "\n";
+    return digitsfour(n);
   } else if (digits == 5) {
-    cout << digitsfive(n) << "\n";
+    return digitsfive(n);
   } else if (digits == 6) {
-    cout << digitssix(n) << "\n";
+    return digitssix(n);
   } else if (digits == 7) {
-    cout << digitsseven(n) << "\n";
+    return digitsseven(n);
+  }
+}
+
+bool isPali(int num) {
+  int n = num;
+  int rev = 0;
+  while (num > 0) {
+    int dig = num % 10;
+    rev = rev * 10 + dig;
+    num = num / 10;
+  }
+  if (n == rev) {
+    return 1;
+  } else {
+    return 0;
   }
 }
 
@@ -256,19 +297,30 @@ int main() {
   std::ios_base::sync_with_stdio(false);
   std::cin.tie(NULL);
 
-  long int t;
-  cin >> t;
-  if (t > 0) {
-    long int arr[t];
+  for (int i = 1; i <= 10000000; i++) {
+    int x = next_palindrome(i);
+    if (isPali(x)){
+      cout << x << endl;
 
-    for (int i = 0; i < t; i++) {
-      cin >> arr[i];
-    }
-    for (int j = 0; j < t; j++) {
-
-      next_palindrome(arr[j] + 1);
+    } else {
+      cout << x << "is not a  pali"<< endl;
+      break;
     }
   }
+
+  // long int t;
+  // cin >> t;
+  // if (t > 0) {
+  //   long int arr[t];
+
+  //   for (int i = 0; i < t; i++) {
+  //     cin >> arr[i];
+  //   }
+  //   for (int j = 0; j < t; j++) {
+
+  //     next_palindrome(arr[j] + 1);
+  //   }
+  // }
 
   return 0;
 }

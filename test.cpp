@@ -230,13 +230,27 @@ void next_palindrome(long int n) {
 
   if (n == 1) {
 
-  } else if (n < 8) {
-    cout << n << "\n";
+  } else if (n==2){
+    cout << 2 << "\n";
+  } else if (n==3){
+    cout << 3 << "\n";
+  } else if (n==4){
+    cout << 4 << "\n";
+  } else if (n==5){
+    cout << 5 << "\n";
+  } else if (n==6){
+    cout << 6 << "\n";
+  } else if (n==7){
+    cout << 7 << "\n";
   } else if (n==8){
+    cout << 8 << "\n";
+  } else if (n == 9) {
     cout << 9 << "\n";
-  }  else if (n == 9) {
+  } else if (n==10){
     cout << 11 << "\n";
-  } else if (digits == 1) {
+  }
+  
+  else if (digits == 1) {
     cout << digitsone(n) << "\n";
   } else if (digits == 2) {
     cout << digitstwo(n) << "\n";
