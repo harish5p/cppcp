@@ -14,10 +14,16 @@ long int digitsone(long int n) {
   } else {
     result = (tens + 1) * 11;
   }
+  // cout << "Result for digitsone " <<result << endl;
+
+  if (result/10 != result%10){
+    result = result +1;
+  }
 
   if (result >=100) {
     result = 100;
-  }
+  } 
+  // cout << "Updated result for digitsone: " << result << endl;
   return result;
 
 
@@ -36,10 +42,16 @@ long int digitstwo(long int n) {
   } else {
    result = hundreds * 100 + tens * 10 + (hundreds + 10);
   }
+  // cout << "Result for digitstwo " <<result << endl;
 
-  if (result / 100 != result % 10) {
-    result = result + 1;
+  if (result/100 != result%10){
+    result = result +1;
   }
+
+  if (result >=1000) {
+    result = 1000;
+  } 
+  // cout << "Updated result for digitstwo: " << result << endl;
   return result;
 }
 
@@ -61,10 +73,16 @@ long int digitsthree(long int n) {
   } else {
     result = thousands * 1000 + (thousands) + midtens * 10;
   }
+  // cout << "Result for digitsthree " <<result << endl;
 
-  if (result / 1000 != result % 10) {
-    result = result + 1;
+  if (result/1000 != result%10){
+    result = result +1;
   }
+
+  if (result >=10000) {
+    result = 10000;
+  } 
+  // cout << "Updated result for digitsthree: " << result << endl;
   return result;
 }
 
@@ -86,10 +104,16 @@ long int digitsfour(long int n) {
   } else {
     result = tenthousands * 10000 + tenthousands + midtens * 10;
   }
+  // cout << "Result for digitsfour " <<result << endl;
 
-  if (result / 10000 != result % 10) {
-    result = result + 1;
+  if (result/10000 != result%10){
+    result = result +1;
   }
+
+  if (result >=100000) {
+    result = 100000;
+  } 
+  // cout << "Updated result for digitsfour: " << result << endl;
   return result;
 }
 
@@ -113,10 +137,16 @@ long int digitsfive(long int n) {
   } else {
     result = lakhs * 100000 + lakhs + midtens * 10;
   }
+  // cout << "Result for digitsfive " <<result << endl;
 
-  if (result / 100000 != result % 10) {
-    result = result + 1;
+  if (result/100000 != result%10){
+    result = result +1;
   }
+
+  if (result >=1000000) {
+    result = 1000000;
+  } 
+  // cout << "Updated result for digitsfive: " << result << endl;
   return result;
 }
 
@@ -142,9 +172,17 @@ long int digitssix(long int n) {
   } else {
     result = tenlakhs * 1000000 + tenlakhs + (midtens * 10);
   }
-  if (result / 1000000 != result % 10) {
-    result = result + 1;
+
+  // cout << "Result for digitssix " <<result << endl;
+
+  if (result/1000000 != result%10){
+    result = result +1;
   }
+
+  if (result >=10000000) {
+    result = 10000000;
+  } 
+  // cout << "Updated result for digitssix: " << result << endl;
   return result;
 }
 
@@ -173,9 +211,16 @@ long int digitsseven(long int n) {
     result = crores * 10000000 + crores + midtens * 10;
   }
 
-  if (result / 10000000 != result % 10) {
-    result = result + 1;
+  // cout << "Result for digitsseven " <<result << endl;
+
+  if (result/10000000 != result%10){
+    result = result +1;
   }
+
+  if (result >=100000000) {
+    result = 100000000;
+  } 
+  // cout << "Updated result for digitsseven: " << result << endl;
   return result;
 }
 
