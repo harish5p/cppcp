@@ -5,28 +5,42 @@ using namespace std;
 long int digitsone(long int n) {
   int tens = n / 10;
   int units = n % 10;
+  int result;
 
   if (tens == units) {
-    return n;
+    result = n;
   } else if (tens > units) {
-    return tens * 11;
+    result = tens * 11;
   } else {
-    return (tens + 1) * 11;
+    result = (tens + 1) * 11;
   }
+
+  if (result >=100) {
+    result = 100;
+  }
+  return result;
+
+
 }
 
 long int digitstwo(long int n) {
   int hundreds = n / 100;
   int tens = (n / 10) % 10;
   int units = n % 10;
+  int result;
 
   if (hundreds == units) {
-    return n;
+    result = n;
   } else if (hundreds > units) {
-    return hundreds * 100 + tens * 10 + hundreds;
+    result = hundreds * 100 + tens * 10 + hundreds;
   } else {
-    return hundreds * 100 + tens * 10 + (hundreds + 10);
+   result = hundreds * 100 + tens * 10 + (hundreds + 10);
   }
+
+  if (result / 100 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 long int digitsthree(long int n) {
