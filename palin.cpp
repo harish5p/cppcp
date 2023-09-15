@@ -170,7 +170,7 @@ int main() {
   long int t;
   cin >> t;
   if (t > 0) {
-    int arr[t];
+    long int arr[t];
 
     for (int i = 0; i < t; i++) {
       cin >> arr[i];
