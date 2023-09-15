@@ -36,14 +36,22 @@ long int digitsthree(long int n) {
   int units = n % 10;
   int middle = digitsone(hundreds * 10 + tens);
   int midtens = digitsone(hundreds * 10 + tens + 1);
+  int result;
 
   if (thousands == units) {
-    return middle * 10 + thousands * 1000 + units;
+    result = middle * 10 + thousands * 1000 + units;
+
   } else if (thousands > units) {
-    return thousands * 1000 + thousands + middle * 10;
+    result = thousands * 1000 + thousands + middle * 10;
+
   } else {
-    return thousands * 1000 + (thousands) + midtens * 10;
+    result = thousands * 1000 + (thousands) + midtens * 10;
   }
+
+  if (result / 1000 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 long int digitsfour(long int n) {
@@ -54,14 +62,21 @@ long int digitsfour(long int n) {
   int units = n % 10;
   int middle = digitstwo(thousands * 100 + hundreds * 10 + tens);
   int midtens = digitstwo(thousands * 100 + hundreds * 10 + tens + 1);
+  int result;
 
   if (tenthousands == units) {
-    return tenthousands * 10000 + units + middle * 10;
+
+    result = tenthousands * 10000 + units + middle * 10;
   } else if (tenthousands > units) {
-    return tenthousands * 10000 + tenthousands + middle * 10;
+    result = tenthousands * 10000 + tenthousands + middle * 10;
   } else {
-    return tenthousands * 10000 + tenthousands + midtens * 10;
+    result = tenthousands * 10000 + tenthousands + midtens * 10;
   }
+
+  if (result / 10000 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 long int digitsfive(long int n) {
@@ -75,14 +90,20 @@ long int digitsfive(long int n) {
       digitsthree(tenthousands * 1000 + thousands * 100 + hundreds * 10 + tens);
   int midtens = digitsthree(tenthousands * 1000 + thousands * 100 +
                             hundreds * 10 + tens + 1);
+  int result;
 
   if (lakhs == units) {
-    return lakhs * 100000 + units + middle * 10;
+    result = lakhs * 100000 + units + middle * 10;
   } else if (lakhs > units) {
-    return lakhs * 100000 + lakhs + middle * 10;
+    result = lakhs * 100000 + lakhs + middle * 10;
   } else {
-    return lakhs * 100000 + lakhs + midtens * 10;
+    result = lakhs * 100000 + lakhs + midtens * 10;
   }
+
+  if (result / 100000 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 long int digitssix(long int n) {
@@ -95,19 +116,22 @@ long int digitssix(long int n) {
   long int tens = (n / 10) % 10;
   long int units = n % 10;
   long int middle = digitsfour(lakhs * 10000 + tenthousands * 1000 +
-                          thousands * 100 + hundreds * 10 + tens);
+                               thousands * 100 + hundreds * 10 + tens);
   long int midtens = digitsfour(lakhs * 10000 + tenthousands * 1000 +
-                           thousands * 100 + hundreds * 10 + tens + 1);
-
-  
+                                thousands * 100 + hundreds * 10 + tens + 1);
+  long int result;
 
   if (tenlakhs == units) {
-    return tenlakhs * 1000000 + units + (middle * 10);
+    result = tenlakhs * 1000000 + units + (middle * 10);
   } else if (tenlakhs > units) {
-    return tenlakhs * 1000000 + tenlakhs + (middle * 10);
+    result = tenlakhs * 1000000 + tenlakhs + (middle * 10);
   } else {
-    return tenlakhs * 1000000 + tenlakhs + (midtens * 10);
+    result = tenlakhs * 1000000 + tenlakhs + (midtens * 10);
   }
+  if (result / 1000000 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 long int digitsseven(long int n) {
@@ -125,14 +149,20 @@ long int digitsseven(long int n) {
   int midtens =
       digitsfive(tenlakhs * 100000 + lakhs * 10000 + tenthousands * 1000 +
                  thousands * 100 + hundreds * 10 + tens + 1);
+  int result;
 
   if (crores == units) {
-    return crores * 10000000 + units + middle * 10;
+    result = crores * 10000000 + units + middle * 10;
   } else if (crores > units) {
-    return crores * 10000000 + crores + middle * 10;
+    result = crores * 10000000 + crores + middle * 10;
   } else {
-    return crores * 10000000 + crores + midtens * 10;
+    result = crores * 10000000 + crores + midtens * 10;
   }
+
+  if (result / 10000000 != result % 10) {
+    result = result + 1;
+  }
+  return result;
 }
 
 void next_palindrome(long int n) {
