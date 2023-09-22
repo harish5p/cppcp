@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#define lli long long int
+
 using namespace std;
 
 string next_palindrome(string str){
