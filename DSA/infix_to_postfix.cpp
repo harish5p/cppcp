@@ -105,7 +105,7 @@ char *InToPost(char *infix) {
 }
 
 int main() {
-  char *infix = "a+b*c-d/e";
+  char* infix = "a+b*c-d/e";
   push('#');
   char *postfix = InToPost(infix);
   printf("%s ", postfix);
