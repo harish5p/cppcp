@@ -4,6 +4,7 @@
 
 #include <bits/stdc++.h>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -40,6 +41,8 @@ int boxStacking(vector<box> boxes, int n) {
 }
 
 int main() {
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(NULL);
   while (true) {
     int n;
     cin >> n;
@@ -69,7 +72,6 @@ int main() {
 
     cout << boxStacking(boxes, n) << '\n';
   }
-   
 
   return 0;
 }
