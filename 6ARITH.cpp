@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 using namespace std;
 
 void print_math(string str) {
@@ -87,7 +86,7 @@ void print_math(string str) {
       int inter_result = stoi(first) * i_digit;
 
       int inter_result_len = to_string(inter_result).length();
-      string inter_spaces(result_len - inter_result_len -j, ' ');
+      string inter_spaces(result_len - inter_result_len - j, ' ');
       j++;
       cout << inter_spaces << inter_result << '\n';
     }
