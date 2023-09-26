@@ -47,7 +47,6 @@ void BST::Insert(int key){
         }else{
             return;
         }
-
     }
     p = new Node;
     p->data = key;
