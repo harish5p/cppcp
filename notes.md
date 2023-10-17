@@ -1,1 +1,1 @@
-to revise - problem 10, BULK,
+to revise - problem 10, BULK, 12 MMind
