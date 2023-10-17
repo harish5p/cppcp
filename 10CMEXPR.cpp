@@ -3,7 +3,7 @@ using namespace std;
 
 //  shunting yard algorithm
 // https://chat.openai.com/c/ecc68770-050c-4bde-b387-a7950de0c5e8
-
+// https://chat.openai.com/c/99b85e70-661f-4763-88ea-08b7bf9b5f21
 struct Node {
   char c;
   Node *l;
