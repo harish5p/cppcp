@@ -36,3 +36,5 @@ int main(){
         cin >> N;
     }
 }
+
+// https://chat.openai.com/c/d1b8527d-fbce-471e-b472-dce2cb53dab2
