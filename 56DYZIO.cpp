@@ -10,12 +10,15 @@ int input(){
             return x;
         }
         x=10*x+c-'0';
+        
     }
+    
 }
 
 int a,b,c;
 
 void solve(int level){
+    // cout << a << " " << b <<" " << c <<'\n';
     if(level>a){
         a=level;
         c=b;
