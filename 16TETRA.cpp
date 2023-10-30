@@ -1,3 +1,7 @@
+// https://www.youtube.com/watch?v=SlEzaXXlrHw
+// https://en.wikipedia.org/wiki/Determinant - gives volume 
+// https://chat.openai.com/c/9b23f411-c7ff-4c4e-9999-405539ef856a
+// https://en.cppreference.com/w/cpp/algorithm/next_permutation
 #include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
