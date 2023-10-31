@@ -1,3 +1,5 @@
+// https://chat.openai.com/c/35ba3d5f-c77d-409c-99e7-9a6b0c96365b
+
 #include <bits/stdc++.h>
 
 using namespace std;
